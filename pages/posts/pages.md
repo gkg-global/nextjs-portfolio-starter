@@ -1,238 +1,74 @@
 ---
-title: Next.js Pages
-date: 2021/3/18
+title: The Phenomenon of Social Like
+date: 2019/2/28
 description: Learn more about Next.js pages.
-tag: web development
-author: You
+tag: social networks
+author: Kirill Goryunov
 ---
 
-# Next.js Pages
+# The Phenomenon of Social Like
 
-In Next.js, a **page** is a [React Component](https://reactjs.org/docs/components-and-props.html) exported from a `.js`, `.jsx`, `.ts`, or `.tsx` file in the `pages` directory. Each page is associated with a route based on its file name.
+The first version of the Like button also known as Awesome button was developed by Facebook in 2007. Mark Zuckerberg was concerned about the public nature of the feature and chose not to launch it until 2009 [1].
 
-**Example**: If you create `pages/about.js` that exports a React component like below, it will be accessible at `/about`.
+Later, In 2010, Like button were added to individuals` comments and other content [2]. Since then, almost all public activity on Facebook have been likable. Also Facebook started to include posts and user links that liked in their timelines, as part of the activity log.
 
-```
-function About() {
-  return <div>About</div>
-}
+This changed liking from a relatively private action (from one user to another, visible only to the friends of the user whose object was liked) to a fundamentally public gesture.
 
-export default About
-```
+In essence, the Like button contains a binary code: Either users like a content or they remain indifferent.
 
-### Pages with Dynamic Routes
+> Facebook does not contain a Dislike button. It was tested as a private feature but Facebook decided that it would discourage people from sharing [3]
 
-Next.js supports pages with dynamic routes. For example, if you create a file called `pages/posts/[id].js`, then it will be accessible at `posts/1`, `posts/2`, etc.
+### Key terms of social Like
 
-> To learn more about dynamic routing, check the [Dynamic Routing documentation](/docs/routing/dynamic-routes.md).
+According to Facebook:
 
-## Pre-rendering
+> “Like is a way to give positive feedback or to connect with things you care about on Facebook. You can like content that your friends post to give them feedback or like a Page that you want to connect with on Facebook.”
 
-By default, Next.js **pre-renders** every page. This means that Next.js generates HTML for each page in advance, instead of having it all done by client-side JavaScript. Pre-rendering can result in better performance and SEO.
+## Liking a content
 
-Each generated HTML is associated with minimal JavaScript code necessary for that page. When a page is loaded by the browser, its JavaScript code runs and makes the page fully interactive. (This process is called _hydration_.)
+Liking the post, comment, photo, etc is one of the most common and simple and frequent forms of activity on Facebook. In 2019, users liked an astonishing [**4 million objects every minute.**](https://www.brandwatch.com/blog/facebook-statistics/)
 
-### Two forms of Pre-rendering
+## Economic term
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+The Like button is a central element in the emerging reputation-based cluster of business models. It powers a growing share of Web-based companies. Gerlitz and Helmond (2013) claim that “the Like economy” is the next step in the evolution of Internet money-making principles.
 
-- [**Static Generation (Recommended)**](#static-generation-recommended): The HTML is generated at **build time** and will be reused on each request.
-- [**Server-side Rendering**](#server-side-rendering): The HTML is generated on **each request**.
+Before “the Like economy”, the value of a Web site was relative to the individual visitors (hits) it received. The “hit economy” (Rogers, 2002, cited in Gerlitz and Helmond, 2013) was replaced by Google’s PageRank algorithm. This was based on the number and value of the hyperlinks created between Web sites rather than on individual hits on a Web site.
 
-Importantly, Next.js lets you **choose** which pre-rendering form you'd like to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+During the “Like”phase, the Like button has emerged as the source of valuation for Web pages giving birth to the Like economy.
 
-We **recommend** using **Static Generation** over Server-side Rendering for performance reasons. Statically generated pages can be cached by CDN with no extra configuration to boost performance. However, in some cases, Server-side Rendering might be the only option.
+## Political implications and uses
 
-You can also use **Client-side Rendering** along with Static Generation or Server-side Rendering. That means some parts of a page can be rendered entirely by client side JavaScript. To learn more, take a look at the [Data Fetching](/docs/basic-features/data-fetching.md#fetching-data-on-the-client-side) documentation.
+The pros and cons of liking are frequently evoked in discussions concerning social media and political participation. A Pew study (Rainie, et al., 2012) found that 38% of U.S. social network users have used social media to “like or promote material related to politics or social issues.”
 
-## Static Generation (Recommended)
+## Like language
 
-If a page uses **Static Generation**, the page HTML is generated at **build time**. That means in production, the page HTML is generated when you run `next build` . This HTML will then be reused on each request. It can be cached by a CDN.
+TABLE_HERE
 
-In Next.js, you can statically generate pages **with or without data**. Let's take a look at each case.
+The two most popular types of likes were “friendship like” ( a user liked the object because the poster was with an important person to him or her) and “I noted your post like” (a user liked the object posted on his or her Facebook wall to convey the message “I noticed your post, thank you for it”).
 
-### Static Generation without data
+These actions, in addition to the positive signal, carry meanings related to the stability of the relationship between a liker and a receiver of the likes. They are intended to strengthen a connection between these two.
 
-By default, Next.js pre-renders pages using Static Generation without fetching data. Here's an example:
+These findings speak of the important impact of the social effect on liking behaviour. They were further supported by the fact that almost half of the respondents had used network like, façade like and tie maintenance like.
 
-```
-function About() {
-  return <div>About</div>
-}
+- With a **network like**, a user likes an object/ a content because other Facebook friends already liked it.
+- With the **façade like**, the user liked the object because he or she wanted to look good in the eyes of his or her Facebook friends (imagined network audience).
+- The **maintenance like**, the user liked the object because he or she wanted to maintain the relationship with his or her Facebook friend.
 
-export default About
-```
+## Conclusion
 
-Note that this page does not need to fetch any external data to be pre-rendered. In cases like this, Next.js generates a single HTML file per page during build time.
+Social like is the most easily recognized currency of social networking platforms. This is a phenomenal invention that causes a boom of content growth in social networking industry.
 
-### Static Generation with data
+People found the ways to interact to each other through content they share and use social like as a new form of communications and signals.
 
-Some pages require fetching external data for pre-rendering. There are two scenarios, and one or both might apply. In each case, you can use a special function Next.js provides:
+Thereby, social like played a key role in content creation growth, engagement and use of social network platforms.
 
-1. Your page **content** depends on external data: Use `getStaticProps`.
-2. Your page **paths** depend on external data: Use `getStaticPaths` (usually in addition to `getStaticProps`).
+## References
 
-#### Scenario 1: Your page **content** depends on external data
+1. Johan Egebark and Mathias Ekström, 2011. “Like what you like or like what others like? Conformity and peer effects on Facebook,” Research Institute of Industrial Economics, Working Paper, number 886 (14 October), at [http://www.ifn.se/wfiles/wp/wp886.pdf](http://www.ifn.se/wfiles/wp/wp886.pdf), accessed 27 May 2015.
+2. Nicole Ellison and danah boyd, 2013. “Sociality through social network sites,” In: William H. Dutton (editor) Oxford handbook of Internet studies. Oxford: Oxford University Press, pp. 151–172.
+doi: [http://dx.doi.org/10.1093/oxfordhb/9780199589074.013.0008](http://dx.doi.org/10.1093/oxfordhb/9780199589074.013.0008), accessed 27 May 2015.
+3. Carolin Gerlitz and Anne Helmond, 2013. “The Like economy: Social buttons and the data-intensive Web,” New Media & Society, volume 15, number 8, pp. 1,348–1,365.
+doi: [http://dx.doi.org/10.1177/1461444812472322](http://dx.doi.org/10.1177/1461444812472322), accessed 27 May 2015.
+4. Veikko Eranti and Markku Lonkila, 2015. “The social significance of the Facebook Like button”, [https://journals.uic.edu/ojs/index.php/fm/article/view/5505](https://journals.uic.edu/ojs/index.php/fm/article/view/5505)
+5. Courtney Seiter, 2016, Research, “The Secret Psychology of Facebook: Why We Like, Share, Comment and Keep Coming Back” [https://blog.bufferapp.com/psychology-of-facebook](https://blog.bufferapp.com/psychology-of-facebook)
 
-**Example**: Your blog page might need to fetch the list of blog posts from a CMS (content management system).
-
-```
-// TODO: Need to fetch `posts` (by calling some API endpoint)
-//       before this page can be pre-rendered.
-function Blog({ posts }) {
-  return (
-    <ul>
-      {posts.map((post) => (
-        <li>{post.title}</li>
-      ))}
-    </ul>
-  )
-}
-
-export default Blog
-```
-
-To fetch this data on pre-render, Next.js allows you to `export` an `async` function called `getStaticProps` from the same file. This function gets called at build time and lets you pass fetched data to the page's `props` on pre-render.
-
-```
-function Blog({ posts }) {
-  // Render posts...
-}
-
-// This function gets called at build time
-export async function getStaticProps() {
-  // Call an external API endpoint to get posts
-  const res = await fetch('https://.../posts')
-  const posts = await res.json()
-
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      posts
-    }
-  }
-}
-
-export default Blog
-```
-
-To learn more about how `getStaticProps` works, check out the [Data Fetching documentation](/docs/basic-features/data-fetching.md#getstaticprops-static-generation).
-
-#### Scenario 2: Your page paths depend on external data
-
-Next.js allows you to create pages with **dynamic routes**. For example, you can create a file called `pages/posts/[id].js` to show a single blog post based on `id`. This will allow you to show a blog post with `id: 1` when you access `posts/1`.
-
-> To learn more about dynamic routing, check the [Dynamic Routing documentation](/docs/routing/dynamic-routes.md).
-
-However, which `id` you want to pre-render at build time might depend on external data.
-
-**Example**: suppose that you've only added one blog post (with `id: 1`) to the database. In this case, you'd only want to pre-render `posts/1` at build time.
-
-Later, you might add the second post with `id: 2`. Then you'd want to pre-render `posts/2` as well.
-
-So your page **paths** that are pre-rendered depend on external data**.** To handle this, Next.js lets you `export` an `async` function called `getStaticPaths` from a dynamic page (`pages/posts/[id].js` in this case). This function gets called at build time and lets you specify which paths you want to pre-render.
-
-```
-// This function gets called at build time
-export async function getStaticPaths() {
-  // Call an external API endpoint to get posts
-  const res = await fetch('https://.../posts')
-  const posts = await res.json()
-
-  // Get the paths we want to pre-render based on posts
-  const paths = posts.map((post) => ({
-    params: { id: post.id }
-  }))
-
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
-  return { paths, fallback: false }
-}
-```
-
-Also in `pages/posts/[id].js`, you need to export `getStaticProps` so that you can fetch the data about the post with this `id` and use it to pre-render the page:
-
-```
-function Post({ post }) {
-  // Render post...
-}
-
-export async function getStaticPaths() {
-  // ...
-}
-
-// This also gets called at build time
-export async function getStaticProps({ params }) {
-  // params contains the post `id`.
-  // If the route is like /posts/1, then params.id is 1
-  const res = await fetch(`https://.../posts/${params.id}`)
-  const post = await res.json()
-
-  // Pass post data to the page via props
-  return { props: { post } }
-}
-
-export default Post
-```
-
-To learn more about how `getStaticPaths` works, check out the [Data Fetching documentation](/docs/basic-features/data-fetching.md#getstaticpaths-static-generation).
-
-### When should I use Static Generation?
-
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
-
-You can use Static Generation for many types of pages, including:
-
-- Marketing pages
-- Blog posts
-- E-commerce product listings
-- Help and documentation
-
-You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
-
-On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
-
-In cases like this, you can do one of the following:
-
-- Use Static Generation with **Client-side Rendering:** You can skip pre-rendering some parts of a page and then use client-side JavaScript to populate them. To learn more about this approach, check out the [Data Fetching documentation](/docs/basic-features/data-fetching.md#fetching-data-on-the-client-side).
-- Use **Server-Side Rendering:** Next.js pre-renders a page on each request. It will be slower because the page cannot be cached by a CDN, but the pre-rendered page will always be up-to-date. We'll talk about this approach below.
-
-## Server-side Rendering
-
-> Also referred to as "SSR" or "Dynamic Rendering".
-
-If a page uses **Server-side Rendering**, the page HTML is generated on **each request**.
-
-To use Server-side Rendering for a page, you need to `export` an `async` function called `getServerSideProps`. This function will be called by the server on every request.
-
-For example, suppose that your page needs to pre-render frequently updated data (fetched from an external API). You can write `getServerSideProps` which fetches this data and passes it to `Page` like below:
-
-```
-function Page({ data }) {
-  // Render data...
-}
-
-// This gets called on every request
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`https://.../data`)
-  const data = await res.json()
-
-  // Pass data to the page via props
-  return { props: { data } }
-}
-
-export default Page
-```
-
-As you can see, `getServerSideProps` is similar to `getStaticProps`, but the difference is that `getServerSideProps` is run on every request instead of on build time.
-
-To learn more about how `getServerSideProps` works, check out our [Data Fetching documentation](/docs/basic-features/data-fetching.md#getserversideprops-server-side-rendering)
-
-## Summary
-
-We've discussed two forms of pre-rendering for Next.js.
-
-- **Static Generation (Recommended):** The HTML is generated at **build time** and will be reused on each request. To make a page use Static Generation, either export the page component, or export `getStaticProps` (and `getStaticPaths` if necessary). It's great for pages that can be pre-rendered ahead of a user's request. You can also use it with Client-side Rendering to bring in additional data.
-- **Server-side Rendering:** The HTML is generated on **each request**. To make a page use Server-side Rendering, export `getServerSideProps`. Because Server-side Rendering results in slower performance than Static Generation, use this only if absolutely necessary.
